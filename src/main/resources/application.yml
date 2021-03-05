@@ -1,0 +1,9 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+#钉钉Url
+ding:
+  serverUrl: https://oapi.dingtalk.com/robot/send?access_token=e3ee796b38a1c3f63ab063bf6a8fc1b8b1e3005f9c626b225b3faa406179449a
