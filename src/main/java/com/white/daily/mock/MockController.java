@@ -1,5 +1,7 @@
 package com.white.daily.mock;
 
+import com.white.daily.mock.service.MockService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +23,9 @@ import java.io.InputStream;
 @RequestMapping("/mock")
 public class MockController {
 
+    @Autowired
+    private MockService mockService;
+
     @RequestMapping("/file")
     public String uploadFile(@RequestPart("file")MultipartFile file, Model model) throws IOException {
 
@@ -35,5 +40,11 @@ public class MockController {
         String fileName = "/图片/upload" + filename;
         model.addAttribute("fileName",fileName);
         return filename;
+    }
+
+    @RequestMapping("send")
+    public String sendEmail(){
+        mockService.sendEmail();
+        return null;
     }
 }

@@ -5,10 +5,9 @@ import com.dingtalk.api.DingTalkClient;
 import com.dingtalk.api.request.OapiRobotSendRequest;
 import com.dingtalk.api.response.OapiRobotSendResponse;
 import com.taobao.api.ApiException;
-import com.white.daily.config.DingRobotConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * 钉钉机器人 发送消息
  * @author tcs
  * @date Created in 2021-03-05
  */
