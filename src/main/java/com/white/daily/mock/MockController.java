@@ -2,14 +2,12 @@ package com.white.daily.mock;
 
 import com.alibaba.excel.EasyExcel;
 import com.white.daily.mock.service.MockService;
+import com.white.daily.pojo.ApplyCouponRequest;
 import com.white.daily.pojo.excel.StudentExcel;
 import com.white.daily.utils.ExcelUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestPart;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -80,5 +78,10 @@ public class MockController {
         response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
         EasyExcel.write(response.getOutputStream(), StudentExcel.class).sheet("模板").doWrite(excelList);*/
         ExcelUtils.export(response,"testFileName","sheetName",excelList,StudentExcel.class);
+    }
+
+    @PostMapping("/validator")
+    public String validator(@RequestBody ApplyCouponRequest request){
+        return null;
     }
 }

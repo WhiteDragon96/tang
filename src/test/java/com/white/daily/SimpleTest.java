@@ -1,6 +1,6 @@
 package com.white.daily;
 
-import com.alibaba.fastjson.JSON;
+//import com.alibaba.fastjson.JSON;
 import com.white.daily.pojo.Student;
 import com.white.daily.pojo.Teacher;
 import com.white.daily.utils.HttpUtil;
@@ -36,9 +36,9 @@ public class SimpleTest {
     @Test
     public void testHttpUtil(){
         String s = HttpUtil.doGet("https://zhly.lyj.zj.gov.cn:8081/api/wap/getrgfys","2020-10-1","2021-3-16");
-        Object parse = JSON.parse(s);
+//        Object parse = JSON.parse(s);
 
-        System.out.println(parse);
+//        System.out.println(parse);
         System.out.println(s);
     }
 }
