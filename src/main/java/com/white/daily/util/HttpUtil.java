@@ -1,4 +1,4 @@
-package com.white.daily.utils;
+package com.white.daily.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;

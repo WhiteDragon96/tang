@@ -1,4 +1,4 @@
-package com.white.daily.utils;
+package com.white.daily.util;
 
 import com.dingtalk.api.DefaultDingTalkClient;
 import com.dingtalk.api.DingTalkClient;

@@ -3,12 +3,10 @@ package com.white.daily;
 import com.alibaba.fastjson.JSON;
 import com.white.daily.pojo.Student;
 import com.white.daily.pojo.Teacher;
-import com.white.daily.utils.HttpUtil;
-import com.white.daily.utils.PojoUtils;
-import org.json.JSONObject;
+import com.white.daily.util.HttpUtil;
+import com.white.daily.util.PojoUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
-import org.springframework.cglib.beans.BeanCopier;
 
 /**
  * @author tcs

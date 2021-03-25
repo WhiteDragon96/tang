@@ -1,25 +1,27 @@
 package com.white.daily.mock;
 
-import com.alibaba.excel.EasyExcel;
 import com.white.daily.mock.service.MockService;
 import com.white.daily.pojo.excel.StudentExcel;
-import com.white.daily.utils.ExcelUtils;
+import com.white.daily.pojo.vo.BeanValidationVO;
+import com.white.daily.util.ExcelUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * @author tcs
@@ -32,6 +34,22 @@ public class MockController {
     @Autowired
     private MockService mockService;
 
+    @RequestMapping("/test")
+    public String test(HttpServletRequest request){
+        String clientIp = request.getHeader("x-forwarded-for");
+        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("Proxy-Client-IP");
+        }
+        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+            clientIp = request.getRemoteAddr();
+        }
+        System.out.println(LocalDateTime.now().toString() +": " + clientIp);
+
+        return "FUCK!" ;
+    }
     @RequestMapping("/file")
     public String uploadFile(@RequestPart("file") MultipartFile file, Model model) throws IOException {
 
@@ -72,13 +90,11 @@ public class MockController {
         excelList.add(studentExcel);
         excelList.add(studentExcel2);
         excelList.add(studentExcel3);
-        /*response.setContentType("application/vnd.ms-excel");
-        response.setCharacterEncoding("utf-8");
-        // 这里URLEncoder.encode可以防止中文乱码
-        String fileName1 = UUID.randomUUID().toString().replace("-","") + System.currentTimeMillis() + ".xlsx";
-        String fileName = URLEncoder.encode(fileName1, "UTF-8").replaceAll("\\+", "%20");
-        response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
-        EasyExcel.write(response.getOutputStream(), StudentExcel.class).sheet("模板").doWrite(excelList);*/
         ExcelUtils.export(response,"testFileName","sheetName",excelList,StudentExcel.class);
+    }
+
+    @PostMapping("/submit")
+    public String submit(@RequestBody @Validated BeanValidationVO beanValidationVO){
+        return beanValidationVO.toString();
     }
 }

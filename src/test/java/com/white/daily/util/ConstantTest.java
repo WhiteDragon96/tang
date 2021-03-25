@@ -1,4 +1,4 @@
-package com.white.daily.utils;
+package com.white.daily.util;
 
 import com.white.daily.constant.TestConstant;
 import org.junit.jupiter.api.Test;

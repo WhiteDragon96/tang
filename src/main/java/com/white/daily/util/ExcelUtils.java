@@ -1,4 +1,4 @@
-package com.white.daily.utils;
+package com.white.daily.util;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.read.builder.ExcelReaderBuilder;

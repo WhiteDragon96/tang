@@ -1,4 +1,4 @@
-package com.white.daily.utils;/*
+package com.white.daily.util;/*
  *      Copyright (c) 2018-2028, DreamLu All rights reserved.
  *
  *  Redistribution and use in source and binary forms, with or without
