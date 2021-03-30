@@ -1,9 +1,12 @@
 package com.white.daily.mock;
 
 import com.white.daily.mock.service.MockService;
+import com.white.daily.pojo.QueryRefundResultRequest;
 import com.white.daily.pojo.excel.StudentExcel;
-import com.white.daily.pojo.vo.BeanValidationVO;
 import com.white.daily.util.ExcelUtils;
+import com.white.daily.util.ValidatorUtil;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -17,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -29,27 +33,30 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/mock")
+@Slf4j
+@AllArgsConstructor
 public class MockController {
 
     @Autowired
     private MockService mockService;
 
     @RequestMapping("/test")
-    public String test(HttpServletRequest request){
+    public String test(HttpServletRequest request) {
         String clientIp = request.getHeader("x-forwarded-for");
-        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
             clientIp = request.getHeader("Proxy-Client-IP");
         }
-        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
             clientIp = request.getHeader("WL-Proxy-Client-IP");
         }
-        if(clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
+        if (clientIp == null || clientIp.length() == 0 || "unknown".equalsIgnoreCase(clientIp)) {
             clientIp = request.getRemoteAddr();
         }
-        System.out.println(LocalDateTime.now().toString() +": " + clientIp);
+        System.out.println(LocalDateTime.now().toString() + ": " + clientIp);
 
-        return "FUCK!" ;
+        return "FUCK!";
     }
+
     @RequestMapping("/file")
     public String uploadFile(@RequestPart("file") MultipartFile file, Model model) throws IOException {
 
@@ -84,17 +91,22 @@ public class MockController {
     @GetMapping("/download")
     public void download(HttpServletResponse response) throws IOException {
         List<StudentExcel> excelList = new ArrayList<>();
-        StudentExcel studentExcel = new StudentExcel("迪丽热巴","female",19);
-        StudentExcel studentExcel2 = new StudentExcel("古力娜扎","female",22);
-        StudentExcel studentExcel3 = new StudentExcel("德玛西亚","male",25);
+        StudentExcel studentExcel = new StudentExcel("迪丽热巴", "female", 19);
+        StudentExcel studentExcel2 = new StudentExcel("古力娜扎", "female", 22);
+        StudentExcel studentExcel3 = new StudentExcel("德玛西亚", "male", 25);
         excelList.add(studentExcel);
         excelList.add(studentExcel2);
         excelList.add(studentExcel3);
-        ExcelUtils.export(response,"testFileName","sheetName",excelList,StudentExcel.class);
+        ExcelUtils.export(response, "testFileName", "sheetName", excelList, StudentExcel.class);
     }
 
     @PostMapping("/submit")
-    public String submit(@RequestBody @Validated BeanValidationVO beanValidationVO){
+    public String submit(@RequestBody @Valid QueryRefundResultRequest beanValidationVO) {
+        try {
+            ValidatorUtil.validateWithBizError(beanValidationVO);
+        } catch (Exception e) {
+            log.info(e.toString());
+        }
         return beanValidationVO.toString();
     }
 }
