@@ -9,9 +9,32 @@
         <result column="age" property="age"/>
     </resultMap>
 
+    <insert id="addUserList" parameterType="com.white.daily.pojo.User">
+        INSERT  INTO  t_user (username,age) VALUES
+        <foreach collection = "users" item = "user" open="" close = "" separator = "," >
+            (#{user.username},#{user.age})
+        </foreach>
+    </insert>
+
+    <insert id="insert">
+        INSERT INTO t_user (username, age) VALUES (#{user.username},#{user.age})
+    </insert>
+
 
     <select id="selectUserList" resultType="com.white.daily.pojo.User">
         select * from t_user
+    </select>
+    <select id="selectUser" resultType="com.white.daily.pojo.User" parameterType="com.white.daily.pojo.User">
+        select id,username,age from t_user where 1=1
+        <if test="id != null and id != '' ">
+           and id = #{id}
+        </if>
+        <if test="username != null and username != ''">
+           and username = #{username}
+        </if>
+        <if test="age != null and age != ''">
+            and age = #{age}
+        </if>
     </select>
 
 </mapper>
