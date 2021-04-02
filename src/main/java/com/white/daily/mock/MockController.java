@@ -1,7 +1,9 @@
 package com.white.daily.mock;
 
 import com.white.daily.mock.service.MockService;
+import com.white.daily.mock.service.UserService;
 import com.white.daily.pojo.QueryRefundResultRequest;
+import com.white.daily.pojo.User;
 import com.white.daily.pojo.excel.StudentExcel;
 import com.white.daily.util.ExcelUtils;
 import com.white.daily.util.ValidatorUtil;
@@ -39,6 +41,8 @@ public class MockController {
 
     @Autowired
     private MockService mockService;
+    @Autowired
+    private UserService userService;
 
     @RequestMapping("/test")
     public String test(HttpServletRequest request) {
@@ -108,5 +112,12 @@ public class MockController {
             log.info(e.toString());
         }
         return beanValidationVO.toString();
+    }
+
+
+
+    @GetMapping("/user")
+    public List<User> getUser() {
+        return userService.getUserList();
     }
 }

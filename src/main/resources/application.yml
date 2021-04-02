@@ -3,7 +3,14 @@ spring:
     multipart:
       max-file-size: 1000MB
       max-request-size: 1000MB
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 #钉钉Url
 ding:
   serverUrl: https://oapi.dingtalk.com/robot/send?access_token=e3ee796b38a1c3f63ab063bf6a8fc1b8b1e3005f9c626b225b3faa406179449a
+mybatis:
+  mapper-locations: classpath:com/white/daily/mapper/*Mapper.xml
