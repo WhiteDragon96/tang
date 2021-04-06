@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootTest
 class UtilsApplicationTests {
@@ -40,5 +41,12 @@ class UtilsApplicationTests {
         applicationContext.publishEvent(new OrderEvent(applicationContext,"777"));
     }
 
+    /*@NacosValue(value = "${test.nacos}",autoRefreshed = true)
+    private String testNacos;
+
+    @Test
+    public void testNacos(){
+        System.out.println(testNacos);
+    }*/
 
 }

@@ -4,18 +4,30 @@ spring:
       max-file-size: 1000MB
       max-request-size: 1000MB
   datasource:
-    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/nacos?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
     username: root
     password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
 
 #钉钉Url
 ding:
   serverUrl: https://oapi.dingtalk.com/robot/send?access_token=e3ee796b38a1c3f63ab063bf6a8fc1b8b1e3005f9c626b225b3faa406179449a
 mybatis:
   mapper-locations: classpath:com/white/daily/mapper/*Mapper.xml
-#  configuration:
-#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 logging:
   config: classpath:logback-spring.xml
+
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    namespace: 02c1af5c-2dc3-4bf9-8695-574e5359efc4
+    username: nacos
+    password: nacos
+    data-id: test.yaml
+    group: DEFAULT_GROUP
+    type: yaml
+    auto-refresh: true
+
