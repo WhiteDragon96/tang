@@ -1,5 +1,6 @@
 package com.white.daily.mock;
 
+import com.wf.captcha.SpecCaptcha;
 import com.white.daily.mock.service.MockService;
 import com.white.daily.mock.service.UserService;
 import com.white.daily.pojo.QueryRefundResultRequest;
@@ -24,6 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -116,5 +118,23 @@ public class MockController {
     @GetMapping("/user")
     public List<User> getUser() {
         return userService.getUserList();
+    }
+
+
+    /**
+     * 获取验证码
+     * @return
+     */
+    @GetMapping("/captcha")
+    public String getCaptcha() {
+        /*SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 5);
+        String verCode = specCaptcha.text().toLowerCase();
+        String key = StringUtil.randomUUID();
+        // 存入redis并设置过期时间为30分钟
+        bladeRedis.setEx(CacheNames.CAPTCHA_KEY + key, verCode, Duration.ofMinutes(30));
+        // 将key和base64返回给前端
+        return Kv.create().set("key", key).set("image", specCaptcha.toBase64());*/
+        SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 5);
+        return specCaptcha.toBase64();
     }
 }
