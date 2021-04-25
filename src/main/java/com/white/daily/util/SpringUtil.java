@@ -23,12 +23,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 
 /**
  * spring 工具类
- *
  */
 @Slf4j
+@Component
 public class SpringUtil implements ApplicationContextAware {
 
     @Autowired
@@ -37,6 +38,22 @@ public class SpringUtil implements ApplicationContextAware {
     @Override
     public void setApplicationContext(@Nullable ApplicationContext context) throws BeansException {
         SpringUtil.context = context;
+    }
+
+    /**
+     * 发布事件
+     *
+     * @param event 事件
+     */
+    public static void publishEvent(ApplicationEvent event) {
+        if (context == null) {
+            return;
+        }
+        try {
+            context.publishEvent(event);
+        } catch (Exception ex) {
+            log.error(ex.getMessage());
+        }
     }
 
     /**
@@ -97,20 +114,6 @@ public class SpringUtil implements ApplicationContextAware {
         return context;
     }
 
-    /**
-     * 发布事件
-     *
-     * @param event 事件
-     */
-    public static void publishEvent(ApplicationEvent event) {
-        if (context == null) {
-            return;
-        }
-        try {
-            context.publishEvent(event);
-        } catch (Exception ex) {
-            log.error(ex.getMessage());
-        }
-    }
+
 
 }

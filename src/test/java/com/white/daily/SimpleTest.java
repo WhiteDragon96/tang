@@ -7,11 +7,13 @@ import com.white.daily.util.HttpUtil;
 import com.white.daily.util.PojoUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
+import org.springframework.boot.test.context.SpringBootTest;
 
 /**
  * @author tcs
  * @date Created in 2021-03-12
  */
+@SpringBootTest
 public class SimpleTest {
 
     @Test

@@ -1,5 +1,7 @@
 package com.white.daily.util;
 
+import com.white.daily.annotation.ApiLog;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +17,7 @@ import java.net.URL;
  */
 public class HttpUtil {
 
+    @ApiLog("test")
     public static String doGet(String httpurl, String beginTime, String endTime) {
         HttpURLConnection connection = null;
         InputStream is = null;

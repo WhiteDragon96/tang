@@ -1,6 +1,7 @@
 package com.white.daily.mock;
 
 import com.wf.captcha.SpecCaptcha;
+import com.white.daily.annotation.ApiLog;
 import com.white.daily.mock.service.MockService;
 import com.white.daily.mock.service.UserService;
 import com.white.daily.pojo.QueryRefundResultRequest;
@@ -25,7 +26,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +45,7 @@ public class MockController {
     @Autowired
     private UserService userService;
 
+    @ApiLog("test")
     @RequestMapping("/test")
     public String test(HttpServletRequest request) {
         String clientIp = request.getHeader("x-forwarded-for");
@@ -123,6 +124,7 @@ public class MockController {
 
     /**
      * 获取验证码
+     *
      * @return
      */
     @GetMapping("/captcha")

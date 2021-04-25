@@ -29,7 +29,8 @@ class UtilsApplicationTests {
 
     @Test
     public void testEvent(){
-       // demoEventPublisher.pushlish("hello");
+        demoEventPublisher.pushlish("hello");
+        System.out.println("==========");
         SpringUtil.publishEvent(new OrderEvent("hello","event"));
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(EventConfig.class);
         applicationContext.publishEvent(new OrderEvent(applicationContext,"ddddd"));
