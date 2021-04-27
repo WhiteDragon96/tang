@@ -1,13 +1,18 @@
+server:
+  port: 6699
 spring:
   servlet:
     multipart:
       max-file-size: 1000MB
       max-request-size: 1000MB
   datasource:
-    url: jdbc:mysql://localhost:3306/nacos?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://47.114.105.19:3306/tcs?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
     username: root
-    password: 123456
+    password: T@ng12342234
     driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 
 #钉钉Url
 ding:
@@ -31,3 +36,14 @@ nacos:
     type: yaml
     auto-refresh: true
 
+#xxl:
+#  job:
+#    accessToken: ''
+#    admin:
+#      addresses: http://127.0.0.1:8080/xxl-job-admin
+#    executor:
+#      appname: xxl-job-executor-sample
+#      ip: 192.168.1.248
+#      logpath: ../data/applogs/xxl-job/jobhandler
+#      logretentiondays: -1
+#      port: 9999
