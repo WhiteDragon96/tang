@@ -1,9 +1,8 @@
 package com.white.daily.mock.service.impl;
 
-import com.white.daily.mapper.UserMapper;
+import com.white.daily.mock.mapper.UserMapper;
 import com.white.daily.mock.service.UserService;
-import com.white.daily.pojo.User;
-import lombok.AllArgsConstructor;
+import com.white.daily.mock.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

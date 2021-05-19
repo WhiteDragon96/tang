@@ -1,7 +1,8 @@
 package com.white.daily.benchmark;
 
-import com.white.daily.mapper.UserMapper;
-import com.white.daily.pojo.User;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.white.daily.mock.entity.User;
+import com.white.daily.mock.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -64,4 +65,10 @@ public class DataBaseTest {
         System.out.println("result : " + ((end - start )/1000.0));
     }
 
+    @Test
+    public void selectUser() {
+        List<User> users = userMapper.selectList(new QueryWrapper<User>().last("limit 1"));
+        List<User> users1 = userMapper.selectList(new QueryWrapper<User>().lambda().eq(User::getId, 3));
+        System.out.println(users1);
+    }
 }

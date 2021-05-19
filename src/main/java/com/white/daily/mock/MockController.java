@@ -5,7 +5,7 @@ import com.white.daily.annotation.ApiLog;
 import com.white.daily.mock.service.MockService;
 import com.white.daily.mock.service.UserService;
 import com.white.daily.pojo.QueryRefundResultRequest;
-import com.white.daily.pojo.User;
+import com.white.daily.mock.entity.User;
 import com.white.daily.pojo.excel.StudentExcel;
 import com.white.daily.util.ExcelUtils;
 import com.white.daily.util.ValidatorUtil;

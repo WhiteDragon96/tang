@@ -108,7 +108,11 @@
         </dependency>-->
         <!-- mybatis-generator-core 反向生成java代码-->
 
-
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.4.2</version>
+        </dependency>
 
 
 

@@ -16,7 +16,7 @@ class CodeGenerateTest {
     /**
      * 连接地址
      */
-    public static String URL = "jdbc:mysql://localhost:3306/tcs?characterEncoding=utf8&serverTimezone=UTC&useSSL=false";
+    public static String URL = "jdbc:mysql://47.114.105.19:3306/tcs?characterEncoding=utf8&serverTimezone=UTC&useSSL=false";
     /**
      * 用户名
      */
@@ -24,19 +24,19 @@ class CodeGenerateTest {
     /**
      * 用户密码
      */
-    public static String PASS_WORD = "123456";
+    public static String PASS_WORD = "T@ng12342234";
     /**
      * 代码生成的模块名
      */
-    public static String CODE_NAME = "自定义模块";
+    public static String CODE_NAME = "samples";
     /**
      * 代码所在服务名
      */
-    public static String SERVICE_NAME = "MyUtils";
+    public static String SERVICE_NAME = "mybatis-plus-samples";
     /**
      * 代码生成的包名
      */
-    public static String PACKAGE_NAME = "com.white.daily.mock";
+    public static String PACKAGE_NAME = "com.baomidou.mybatisplus.samples.crud";
     /**
      * 前端代码生成所属系统 sword/saber
      */
@@ -44,11 +44,11 @@ class CodeGenerateTest {
     /**
      * 前端代码生成地址
      */
-    public static String PACKAGE_WEB_DIR = "D:\\Develop\\WorkSpace\\cnarea";
+    public static String PACKAGE_WEB_DIR = "D:\\Develop\\WorkSpace\\samples";
     /**
      * 后端代码生成地址
      */
-    public static String PACKAGE_API_DIR = "D:\\Develop\\WorkSpace\\cnarea";
+    public static String PACKAGE_API_DIR = "D:\\Develop\\WorkSpace\\samples";
     /**
      * 需要去掉的表前缀
      */

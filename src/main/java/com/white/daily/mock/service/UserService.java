@@ -1,6 +1,6 @@
 package com.white.daily.mock.service;
 
-import com.white.daily.pojo.User;
+import com.white.daily.mock.entity.User;
 
 import java.util.List;
 

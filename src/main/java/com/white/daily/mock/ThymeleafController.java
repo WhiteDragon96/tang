@@ -1,6 +1,6 @@
 package com.white.daily.mock;
 
-import com.white.daily.pojo.User;
+import com.white.daily.mock.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;

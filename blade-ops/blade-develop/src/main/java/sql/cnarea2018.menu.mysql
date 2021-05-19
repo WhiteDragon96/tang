@@ -1,0 +1,10 @@
+INSERT INTO `blade_menu`(`id`, `parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+VALUES ('1392755093892440071', 1123598815738675201, 'cnarea2018', '自定义模块', 'menu', '/MyUtils/cnarea2018', NULL, 1, 1, 0, 1, NULL, 0);
+    INSERT INTO `blade_menu`(`id`, `parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+    VALUES ('1392755093892440072', '1392755093892440071', 'cnarea2018_add', '新增', 'add', '/MyUtils/cnarea2018/add', 'plus', 1, 2, 1, 1, NULL, 0);
+    INSERT INTO `blade_menu`(`id`, `parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+    VALUES ('1392755093892440073', '1392755093892440071', 'cnarea2018_edit', '修改', 'edit', '/MyUtils/cnarea2018/edit', 'form', 2, 2, 2, 1, NULL, 0);
+    INSERT INTO `blade_menu`(`id`, `parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+    VALUES ('1392755093892440074', '1392755093892440071', 'cnarea2018_delete', '删除', 'delete', '/api/MyUtils/cnarea2018/remove', 'delete', 3, 2, 3, 1, NULL, 0);
+    INSERT INTO `blade_menu`(`id`, `parent_id`, `code`, `name`, `alias`, `path`, `source`, `sort`, `category`, `action`, `is_open`, `remark`, `is_deleted`)
+    VALUES ('1392755093892440075', '1392755093892440071', 'cnarea2018_view', '查看', 'view', '/MyUtils/cnarea2018/view', 'file-text', 4, 2, 2, 1, NULL, 0);

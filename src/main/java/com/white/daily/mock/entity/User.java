@@ -1,10 +1,13 @@
-package com.white.daily.pojo;
+package com.white.daily.mock.entity;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @author tcs
@@ -13,11 +16,13 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@TableName("user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private	Integer	id;
-    private	String	username;
-    private	Integer	age;
+    private Integer id;
+    private String username;
+    private Integer age;
+    private Date createTime;
 }
