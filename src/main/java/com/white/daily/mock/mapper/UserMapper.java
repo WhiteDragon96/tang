@@ -1,7 +1,7 @@
-package com.white.daily.mapper;
+package com.white.daily.mock.mapper;
 
-import com.white.daily.pojo.User;
-import org.apache.ibatis.annotations.Mapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.white.daily.mock.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -10,8 +10,7 @@ import java.util.List;
  * @author tcs
  * @date Created in 2021-04-02
  */
-@Mapper
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
 
     /**
      *获取所有user
@@ -22,7 +21,7 @@ public interface UserMapper {
 
     void addUserList(@Param("users") List<User> users);
 
-    void insert(@Param("user") User user);
+    int insert(@Param("user") User user);
 
     List<User> selectUser(User user);
 }
