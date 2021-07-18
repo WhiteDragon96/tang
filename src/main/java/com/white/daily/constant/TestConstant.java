@@ -7,4 +7,6 @@ package com.white.daily.constant;
 public interface TestConstant {
 
     String test = ".xml";
+
+
 }

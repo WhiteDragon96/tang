@@ -1,20 +1,17 @@
 package com.white.daily;
 
-import com.dingtalk.api.DefaultDingTalkClient;
-import com.dingtalk.api.DingTalkClient;
-import com.dingtalk.api.request.OapiRobotSendRequest;
-import com.dingtalk.api.response.OapiRobotSendResponse;
 import com.taobao.api.ApiException;
 import com.white.daily.config.DingRobotConfig;
 import com.white.daily.config.EventConfig;
 import com.white.daily.event.OrderEvent;
 import com.white.daily.mock.DemoEventPublisher;
-import com.white.daily.utils.DingUtils;
-import com.white.daily.utils.SpringUtil;
+import com.white.daily.util.DingUtils;
+import com.white.daily.util.SpringUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootTest
 class UtilsApplicationTests {
@@ -32,7 +29,8 @@ class UtilsApplicationTests {
 
     @Test
     public void testEvent(){
-       // demoEventPublisher.pushlish("hello");
+        demoEventPublisher.pushlish("hello");
+        System.out.println("==========");
         SpringUtil.publishEvent(new OrderEvent("hello","event"));
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(EventConfig.class);
         applicationContext.publishEvent(new OrderEvent(applicationContext,"ddddd"));
@@ -44,5 +42,12 @@ class UtilsApplicationTests {
         applicationContext.publishEvent(new OrderEvent(applicationContext,"777"));
     }
 
+    /*@NacosValue(value = "${test.nacos}",autoRefreshed = true)
+    private String testNacos;
+
+    @Test
+    public void testNacos(){
+        System.out.println(testNacos);
+    }*/
 
 }

@@ -1,5 +1,6 @@
 package com.white.daily.exception;
 
+import com.white.daily.pojo.BaseReturnCode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -8,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 业务异常，包含堆栈，方便定位问题
  *
- * @author baihua
- * @date 2019/10/9
+ * @author tcs
+ * @date Created in 2021-03-25
  */
 @Data
 @Accessors(chain = true)

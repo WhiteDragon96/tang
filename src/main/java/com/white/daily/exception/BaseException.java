@@ -1,5 +1,6 @@
 package com.white.daily.exception;
 
+import com.white.daily.pojo.BaseReturnCode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
