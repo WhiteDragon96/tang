@@ -14,6 +14,8 @@ import java.util.concurrent.TimeUnit;
 public class TestRun {
     public static void main(String[] args) throws InterruptedException {
         Runner1 r1 = new Runner1();
+        Thread thread = new Thread(r1);
+        thread.setName("改名线程");
         Runner1 r2= new Runner1();
         Runner1 r3= new Runner1();
 //        r.run();
@@ -31,6 +33,12 @@ public class TestRun {
         tpe.execute(r1);
         tpe.execute(r2);
         tpe.execute(r3);
+        tpe.execute(() ->{
+            for (int i = 0; i < 100; i++) {
+                System.out.println("线程： " + Thread.currentThread().getName());
+            }
+        });
+        thread.start();
 
 
 
@@ -38,7 +46,6 @@ public class TestRun {
         tpe.shutdown();
         for (int i = 0; i < 100; i++) {
             System.out.println("进入Main Thread运行状态");
-            System.out.println(i);
         }
     }
 }
@@ -49,7 +56,6 @@ class Runner1 implements Runnable {
     public void run() {
         for (int i = 0; i < 100; i++) {
             System.out.println(Thread.currentThread().getName() + "正在被执行");
-            System.out.println(i);
         }
     }
 }

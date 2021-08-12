@@ -57,7 +57,12 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.11</version>
         </dependency>
-
+        <!--guava-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
         <!--mysql数据库驱动-->
         <dependency>
             <groupId>mysql</groupId>
