@@ -87,6 +87,11 @@
             <artifactId>swagger-annotations</artifactId>
             <version>1.6.2</version>
         </dependency>
+        <!--redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <!--代码生成-->
         <dependency>
