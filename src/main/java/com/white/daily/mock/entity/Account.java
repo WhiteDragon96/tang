@@ -6,7 +6,9 @@ import java.io.Serializable;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -18,7 +20,9 @@ import lombok.Data;
 @Data
 @ApiModel(value = "Account对象", description = "Account对象")
 @TableName("account")
-public class Account implements Serializable {
+@AllArgsConstructor
+@NoArgsConstructor
+public class Account implements Serializable,Comparable<Account>{
 
 	private static final long serialVersionUID = 1L;
 
@@ -28,4 +32,8 @@ public class Account implements Serializable {
 	private Double money;
 
 
+	@Override
+	public int compareTo(Account o) {
+		return Double.compare(this.money,o.getMoney());
+	}
 }

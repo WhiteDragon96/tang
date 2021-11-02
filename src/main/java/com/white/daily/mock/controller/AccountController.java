@@ -9,6 +9,7 @@ import com.white.daily.mock.entity.Account;
 import com.white.daily.mock.mapper.AccountMapper;
 import com.white.daily.mock.service.IAccountService;
 import com.white.daily.mock.vo.AccountVO;
+import com.white.daily.thread.executor.AsyncService;
 import com.white.daily.util.Func;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -40,6 +41,7 @@ public class AccountController {
     private final IAccountService accountService;
 
     private final AccountMapper accountMapper;
+    private final AsyncService asyncService;
 
     /**
      * 详情
@@ -110,4 +112,10 @@ public class AccountController {
         return R.status(accountService.removeByIds(Func.toLongList(ids)));
     }
 
+    @GetMapping("/async")
+    public void async(){
+        System.out.println(0/1);
+        System.out.println(1/0);
+        asyncService.executeAsync();
+    }
 }
