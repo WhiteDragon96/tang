@@ -1,14 +1,11 @@
 package com.white.daily.publisher;
 
-import com.sun.jndi.toolkit.url.UrlUtil;
 import com.white.daily.annotation.ApiLog;
 import com.white.daily.event.ApiLogEvent;
 import com.white.daily.pojo.LogApi;
 import com.white.daily.util.SpringUtil;
 import com.white.daily.util.WebUtil;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
+
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

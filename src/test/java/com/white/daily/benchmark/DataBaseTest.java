@@ -1,8 +1,9 @@
+/*
 package com.white.daily.benchmark;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.white.daily.mapper.UserMapper;
 import com.white.daily.mock.entity.User;
-import com.white.daily.mock.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,22 +12,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+*/
 /**
  * @author tcs
  * @date Created in 2021-04-02
- */
+ *//*
+
 @SpringBootTest
 public class DataBaseTest {
 
     @Autowired
     private UserMapper userMapper;
 
-    /**
+    */
+/**
      * 测试 sql中使用foreach 和 foreach插入速度对比
      * 1000轮结果如下
      *  sql foreach result is: 478ms
      * foreach result is: 7132ms
-     */
+     *//*
+
     @Test
     public void addUserTest(){
         List<User> users = new ArrayList<>();
@@ -72,3 +77,4 @@ public class DataBaseTest {
         System.out.println(users1);
     }
 }
+*/

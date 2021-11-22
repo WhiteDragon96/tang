@@ -1,55 +1,35 @@
 package com.white.daily;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
+
 class Solution {
-    public static void main(String[] args) {
-        Integer.bitCount(93^73);
-        int i = hammingDistance(93, 73);
-        System.out.println("result is " + i);
-    }
+    public String largestNumber(int[] nums) {
+        String[] strings = new String[2*nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            int num = nums[i];
+            String s = String.valueOf(num);
 
-    public static int hammingDistance(int x, int y) {
-        String sb = Integer.toBinaryString(x);
-        String yb = Integer.toBinaryString(y);
-        int count = 0;
-        char[] chars = sb.toCharArray();
-        char[] chary = yb.toCharArray();
-        char[] chartt;
-        if (sb.length() > yb.length()) {
-            int length = sb.length() - yb.length();
-            chartt = new char[yb.length() + length];
-            for (int i = 0; i < chartt.length; i++) {
-                if (i < length) {
-                    chartt[i] = 48;
-                } else {
-                    chartt[i] = chary[i - length];
-                }
+            if (s.length() >1){
+                String[] split = s.split("");
+                List list = new ArrayList(Arrays.asList(strings));
+                list.addAll(Arrays.asList(split));
+                strings = new String[list.size()];
             }
-
-            for (int i = 0; i < chars.length; i++) {
-                if (chars[i] != chartt[i]) {
-                    count++;
-                }
-            }
-            return count;
-        } else if (yb.length() >= sb.length()) {
-            int length2 = yb.length() - sb.length();
-            chartt = new char[sb.length() + length2];
-            for (int i = 0; i < chartt.length; i++) {
-                if (i < length2) {
-                    chartt[i] = 48;
-                } else {
-                    chartt[i] = chars[i - length2];
-                }
-            }
-            for (int i = 0; i < chary.length; i++) {
-                if (chary[i] != chartt[i]) {
-                    count++;
-                }
-            }
-            return count;
+            String[] strings1 = {String.valueOf(nums[i])};
+            List list = new ArrayList(Arrays.asList(strings));
+            list.addAll(Arrays.asList(strings1));
+            strings = new String[list.size()];
         }
-
-        return 0;
+        int[] array = Arrays.asList(strings).stream().mapToInt(Integer::parseInt).toArray();
+        Arrays.sort(array);
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < array.length; i++) {
+            sb.append(array[i]);
+        }
+        return sb.toString();
     }
 }

@@ -1,3 +1,4 @@
+/*
 package com.white.daily.mock;
 
 import com.wf.captcha.SpecCaptcha;
@@ -8,9 +9,9 @@ import com.white.daily.pojo.QueryRefundResultRequest;
 import com.white.daily.mock.entity.User;
 import com.white.daily.pojo.excel.StudentExcel;
 import com.white.daily.util.ExcelUtils;
-import com.white.daily.util.ValidatorUtil;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.xmlbeans.impl.validator.ValidatorUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,10 +31,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * @author tcs
  * @date Created in 2021-03-04
- */
+ *//*
+
 @RestController
 @RequestMapping("/mock")
 @Slf4j
@@ -85,7 +88,8 @@ public class MockController {
         return null;
     }
 
-    /**
+    */
+/**
      * 文件下载（失败了会返回一个有部分数据的Excel）
      * <p>
      * 1. 创建excel对应的实体对象
@@ -93,7 +97,8 @@ public class MockController {
      * 2. 设置返回的 参数
      * <p>
      * 3. 直接写，这里注意，finish的时候会自动关闭OutputStream,当然你外面再关闭流问题不大
-     */
+     *//*
+
     @GetMapping("/download")
     public void download(HttpServletResponse response) throws IOException {
         List<StudentExcel> excelList = new ArrayList<>();
@@ -122,21 +127,26 @@ public class MockController {
     }
 
 
-    /**
+    */
+/**
      * 获取验证码
      *
      * @return
-     */
+     *//*
+
     @GetMapping("/captcha")
     public String getCaptcha() {
-        /*SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 5);
+        */
+/*SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 5);
         String verCode = specCaptcha.text().toLowerCase();
         String key = StringUtil.randomUUID();
         // 存入redis并设置过期时间为30分钟
         bladeRedis.setEx(CacheNames.CAPTCHA_KEY + key, verCode, Duration.ofMinutes(30));
         // 将key和base64返回给前端
-        return Kv.create().set("key", key).set("image", specCaptcha.toBase64());*/
+        return Kv.create().set("key", key).set("image", specCaptcha.toBase64());*//*
+
         SpecCaptcha specCaptcha = new SpecCaptcha(130, 48, 5);
         return specCaptcha.toBase64();
     }
 }
+*/

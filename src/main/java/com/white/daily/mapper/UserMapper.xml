@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.white.daily.mock.mapper.UserMapper">
+<mapper namespace="com.white.daily.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="userResultMap" type="com.white.daily.mock.entity.User">
+    <resultMap id="userResultMap" type="com.white.daily.pojo.User">
         <id column="id" property="id"/>
         <result column="username" property="username"/>
         <result column="age" property="age"/>
-        <result column="create_time" property="createTime"/>
     </resultMap>
 
-    <insert id="addUserList" parameterType="com.white.daily.mock.entity.User">
+    <insert id="addUserList" parameterType="com.white.daily.pojo.User">
         INSERT  INTO  t_user (username,age) VALUES
         <foreach collection = "users" item = "user" open="" close = "" separator = "," >
             (#{user.username},#{user.age})
@@ -22,10 +21,10 @@
     </insert>
 
 
-    <select id="selectUserList" resultType="com.white.daily.mock.entity.User">
+    <select id="selectUserList" resultType="com.white.daily.pojo.User">
         select * from t_user
     </select>
-    <select id="selectUser" resultType="com.white.daily.mock.entity.User" parameterType="com.white.daily.mock.entity.User">
+    <select id="selectUser" resultType="com.white.daily.pojo.User" parameterType="com.white.daily.pojo.User">
         select id,username,age from t_user where 1=1
         <if test="id != null and id != '' ">
            and id = #{id}
