@@ -1,5 +1,7 @@
 package com.tang.tangjuc.unsafe;
 
+import com.tang.tangjuc.pool.MyThreadPool;
+
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -25,11 +27,10 @@ public class ListTest {
         List<String> list = new CopyOnWriteArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            new Thread(() -> {
+            MyThreadPool.executor.execute(() -> {
                 list.add(UUID.randomUUID().toString().substring(0, 5));
-                System.out.println(list);
-            }, String.valueOf(i)).start();
-
+                System.out.println(Thread.currentThread().getName() + ": " + list);
+            });
         }
     }
 }
