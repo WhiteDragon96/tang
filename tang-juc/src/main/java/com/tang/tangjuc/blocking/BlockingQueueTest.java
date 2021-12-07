@@ -17,7 +17,7 @@ public class BlockingQueueTest  {
      */
     public static void test1(){
         //队列大小
-        ArrayBlockingQueue blockingQueue = new ArrayBlockingQueue<>(3);
+        ArrayBlockingQueue<String> blockingQueue = new ArrayBlockingQueue<>(3);
 
         System.out.println(blockingQueue.add("a"));
         System.out.println(blockingQueue.add("b"));
