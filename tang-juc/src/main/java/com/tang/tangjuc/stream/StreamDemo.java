@@ -20,7 +20,8 @@ public class StreamDemo {
         User user3 = new User(3,"c",23);
         User user4 = new User(4,"d",24);
         User user5 = new User(6,"e",25);
-        List<User> list = Arrays.asList(user1, user2, user3, user4,user5);
+        User user6 = new User(6,"e",20);
+        List<User> list = Arrays.asList(user1, user2, user3, user4,user5,user6);
 
         list.stream()
                 .filter(user -> {return user.getId()%2==0;})
@@ -28,5 +29,19 @@ public class StreamDemo {
                 .map(user -> {return user.getName().toUpperCase();})
                 .sorted((u1,u2) -> { return ((String) u1).compareTo(u2);})
                 .forEach(System.out::println);
+
+        long count = list.stream()
+                .mapToInt(User::getAge)
+                .distinct()
+                .count();
+        list.stream().forEach(user -> {
+            System.out.println(user.getAge());
+        });
+        list.stream().forEachOrdered(user -> {
+            System.out.println(user.getAge());
+        });
+
+
+
     }
 }

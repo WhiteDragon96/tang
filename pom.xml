@@ -6,6 +6,7 @@
     <modules>
         <module>utils</module>
         <module>tang-juc</module>
+        <module>tang-wechat-robot</module>
     </modules>
 
     <parent>
