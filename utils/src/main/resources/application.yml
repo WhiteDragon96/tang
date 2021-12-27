@@ -6,9 +6,9 @@ spring:
       max-file-size: 1000MB
       max-request-size: 1000MB
   datasource:
-    url: jdbc:mysql://47.114.105.19:3306/tcs?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8&serverTimezone=UTC&useSSL=false
     username: root
-    password: T@ng12342234
+    password: 123456
     driver-class-name: com.mysql.jdbc.Driver
   thymeleaf:
     prefix: classpath:/templates/

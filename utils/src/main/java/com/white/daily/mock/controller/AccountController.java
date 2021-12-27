@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.white.daily.constant.api.R;
 import com.white.daily.constant.support.Condition;
 import com.white.daily.constant.support.Query;
+import com.white.daily.guava.GuavaTest;
 import com.white.daily.mock.entity.Account;
 import com.white.daily.mock.mapper.AccountMapper;
 import com.white.daily.mock.service.IAccountService;
@@ -41,6 +42,7 @@ public class AccountController {
 
     private final AccountMapper accountMapper;
     private final AsyncService asyncService;
+    private final GuavaTest guavaTest;
 
     /**
      * 详情
@@ -111,10 +113,8 @@ public class AccountController {
         return R.status(accountService.removeByIds(Func.toLongList(ids)));
     }
 
-    @GetMapping("/async")
-    public void async(){
-        System.out.println(0/1);
-        System.out.println(1/0);
-        asyncService.executeAsync();
+    @GetMapping("/test")
+    public boolean async(){
+        return true;
     }
 }
