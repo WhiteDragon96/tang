@@ -85,7 +85,7 @@ public class WebBotTest extends WeChatBot {
             switch (message.getMsgType()) {
                 case TEXT:
                     System.out.println(String.format("接收到好友 [%s] 的消息: %s", message.getName(), message.getText()));
-
+                    this.api().sendText(message.getFromUserName(), "没有");
                     String url = "https://api.tianapi.com/robot/index?key=bbb921cfb051d7f2ceb5e25b88b783ce&question=" + message.getText();
                     ApiResponse send = this.client().send(new StringRequest(url));
                     String tixing = send.getRawBody();
