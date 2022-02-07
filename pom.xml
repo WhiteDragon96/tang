@@ -7,6 +7,8 @@
         <module>utils</module>
         <module>tang-juc</module>
         <module>tang-wechat-robot</module>
+        <module>tang-test</module>
+        <module>tang-mybatis</module>
     </modules>
 
     <parent>

@@ -28,11 +28,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>io.github.tangcs</groupId>
             <artifactId>wechat-api</artifactId>
             <version>1.0.6</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.github.wechaty</groupId>
             <artifactId>wechaty-puppet</artifactId>
