@@ -1,3 +1,22 @@
+server:
+  port: 6699
+spring:
+  redis:
+    host: 172.18.64.27
+    port: 6379
+    database: 14
+    connect-timeout: 10000
+#redis 集群环境配置
+#    cluster:
+#      nodes: 172.18.64.27:6379,172.18.64.27:7002,172.18.64.27:7003
+#      max-redirects: 3
+#      lettuce:
+#        pool:
+#          max-idle: 16
+#          max-active: 32
+#          min-idle: 8
+#    commandTimeout: 5000
+
 #mybatis-plus配置
 mybatis-plus:
   mapper-locations: classpath:com/neusense/**/mapper/*Mapper.xml

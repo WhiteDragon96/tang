@@ -28,9 +28,7 @@ public class GlobalControllerExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public String handleApiException(HttpServletRequest request, Exception e) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(i);
-        }
+        e.printStackTrace();
         return "系统错误";
     }
 }
