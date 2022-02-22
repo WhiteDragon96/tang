@@ -23,11 +23,11 @@ public class ExecutorConfig {
     /**
      * 最大线程数
      */
-    private int maxPoolSize = 5;
+    private int maxPoolSize = Runtime.getRuntime().availableProcessors();
     /**
      * 队列大小
      */
-    private int queueCapacity = 99999;
+    private int queueCapacity = 12;
     /**
      * 线程池中的线程的名称前缀
      */

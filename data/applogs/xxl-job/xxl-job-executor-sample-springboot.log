@@ -1,0 +1,115 @@
+2022-02-16 15:10:13,374 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 25160 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:10:13,382 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:10:13,386 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:10:15,427 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:10:15,431 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:10:15,469 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:10:16,144 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:10:16,277 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:10:16,476 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:10:17,046 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:10:17,659 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:10:19,133 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 6.196 seconds (JVM running for 7.673)
+2022-02-16 15:10:32,941 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 18528 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:10:32,942 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:10:32,948 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:10:33,776 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:10:33,779 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:10:33,813 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:10:34,470 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:10:34,618 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:10:34,786 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:10:35,269 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:10:35,826 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:10:37,216 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 4.615 seconds (JVM running for 5.888)
+2022-02-16 15:10:56,846 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 9648 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:10:56,847 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:10:56,852 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:10:57,678 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:10:57,681 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:10:57,717 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:10:58,371 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:10:58,504 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:10:58,666 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:10:59,169 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:10:59,720 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:11:01,088 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 4.628 seconds (JVM running for 5.848)
+2022-02-16 15:11:01,522 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 15:14:49,493 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 27036 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:14:49,494 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:14:49,503 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:14:50,393 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:14:50,396 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:14:50,433 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:14:51,119 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:14:51,238 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:14:51,410 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:14:51,903 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:14:52,466 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:14:53,821 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 4.691 seconds (JVM running for 6.014)
+2022-02-16 15:15:02,004 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 32732 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:15:02,005 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:15:02,013 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:15:02,861 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:15:02,864 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:15:02,899 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:15:03,547 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:15:03,679 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:15:03,858 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:15:04,348 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:15:04,899 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:15:06,236 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 4.61 seconds (JVM running for 5.766)
+2022-02-16 15:15:06,612 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 15:15:06,662 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 15:16:57,568 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 26256 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:16:57,570 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:16:57,576 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:16:58,525 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:16:58,528 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:16:58,564 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:16:59,459 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:16:59,606 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:16:59,797 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:17:00,321 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:17:01,111 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:17:02,624 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 5.465 seconds (JVM running for 6.929)
+2022-02-16 15:17:56,149 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 28088 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:17:56,151 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:17:56,156 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:17:56,986 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:17:56,989 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:17:57,025 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:17:57,660 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:17:57,780 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:17:57,943 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:17:58,424 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:17:59,003 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:18:00,380 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 4.598 seconds (JVM running for 5.919)
+2022-02-16 15:18:00,788 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 15:18:00,838 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 15:29:54,857 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 27548 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:29:54,858 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:29:54,863 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:29:55,739 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:29:55,742 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:29:55,784 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:29:56,761 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:29:56,924 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:29:57,187 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:29:57,937 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:29:58,839 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:29:59,291 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 55] Starting RedisTest using Java 1.8.0_312 on DESKTOP-61F0CPK with PID 25540 (started by tangcs in E:\文档\笔记\code\tang\utils)
+2022-02-16 15:29:59,293 INFO [main] com.white.daily.redis.RedisTest [SpringApplication.java : 635] No active profile set, falling back to default profiles: default
+2022-02-16 15:29:59,295 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 17] HV000001: Hibernate Validator 5.2.0.Final
+2022-02-16 15:30:00,650 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 262] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-02-16 15:30:00,654 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-02-16 15:30:00,712 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java : 201] Finished Spring Data repository scanning in 36 ms. Found 0 Redis repository interfaces.
+2022-02-16 15:30:00,944 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 6.448 seconds (JVM running for 7.647)
+2022-02-16 15:30:01,573 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 496] Autowired annotation is not supported on static methods: public static void com.white.daily.config.DingRobotConfig.setUrl(java.lang.String)
+2022-02-16 15:30:01,689 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java : 56] Init DruidDataSource
+2022-02-16 15:30:01,868 INFO [main] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 928] {dataSource-1} inited
+2022-02-16 15:30:02,374 INFO [main] o.s.b.f.a.AutowiredAnnotationBeanPostProcessor [AutowiredAnnotationBeanPostProcessor.java : 478] Autowired annotation is not supported on static fields: private static org.springframework.context.ApplicationContext com.white.daily.util.SpringUtil.context
+2022-02-16 15:30:03,052 INFO [main] o.s.b.a.w.s.WelcomePageHandlerMapping [WelcomePageHandlerMapping.java : 57] Adding welcome page template: index
+2022-02-16 15:30:04,414 INFO [main] com.white.daily.redis.RedisTest [StartupInfoLogger.java : 61] Started RedisTest in 5.602 seconds (JVM running for 7.331)
+2022-02-16 15:30:04,835 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
+2022-02-16 17:30:04,921 INFO [SpringApplicationShutdownHook] c.alibaba.druid.pool.DruidDataSource [DruidDataSource.java : 1823] {dataSource-1} closed
