@@ -26,8 +26,8 @@ public class Account implements Serializable,Comparable<Account>{
 
 	private static final long serialVersionUID = 1L;
 
-	@TableId(value = "id", type = IdType.AUTO)
-	private Integer id;
+	@TableId(value = "id", type = IdType.ID_WORKER)
+	private Long id;
 	private String name;
 	private Double money;
 

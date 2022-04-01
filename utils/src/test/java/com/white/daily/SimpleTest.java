@@ -66,13 +66,13 @@ public class SimpleTest {
     @Test
     public void testGrouping(){
         List<Account> accounts = new ArrayList<>();
-        Account account = new Account(1,"张三",11.0);
-        Account account1 = new Account(2,"张三",2.2);
-        Account account2 = new Account(1, "张三", 5.0);
+        Account account = new Account(1L,"张三",11.0);
+        Account account1 = new Account(2L,"张三",2.2);
+        Account account2 = new Account(1L, "张三", 5.0);
         accounts.add(account);
         accounts.add(account1);
         accounts.add(account2);
-        List<Integer> collect = accounts.stream().map(Account::getId).collect(Collectors.toList());
+        List<Long> collect = accounts.stream().map(Account::getId).collect(Collectors.toList());
         String s = collect.toString();
         System.out.println(s);
         List<Account> accountList = new ArrayList<>();

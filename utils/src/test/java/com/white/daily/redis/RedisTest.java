@@ -2,21 +2,26 @@ package com.white.daily.redis;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.white.daily.pojo.User;
 import com.white.daily.thread.MyThreadPool;
 import com.white.daily.util.JedisPoolUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPubSub;
+import redis.clients.jedis.Transaction;
 import redis.clients.jedis.util.SafeEncoder;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.Executor;
@@ -37,6 +42,17 @@ public class RedisTest {
 
     @Resource(name = "asyncServiceExecutor")
     private Executor executor;
+
+    @Test
+    public void testTemplateRedis(){
+        // 获取redis的连接对象
+        RedisConnection connection = Objects.requireNonNull(redisTemplate.getConnectionFactory()).getConnection();
+        User tang = new User(1, "tang", 18, new Date());
+//        String s = JSONObject.toJSONString(tang);
+        redisTemplate.opsForValue().set("user",tang);
+        System.out.println(redisTemplate.opsForValue().get("user"));
+
+    }
 
     @Test
     public void testSet() {
@@ -201,4 +217,18 @@ class MyJedisPubSub extends JedisPubSub {
         System.out.println(hackers);
         System.out.println(jedis.zrevrange("hackers", 0, -1));
     }
+
+    @Test
+    public void testKuangRedis(){
+        Jedis jedis = JedisPoolUtils.getJedis();
+        System.out.println(jedis.ping());
+        Transaction multi = jedis.multi();
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("hello","world");
+        System.out.println(jedis.keys("*"));
+        System.out.println(jedis.setnx("hello", "world1"));
+        System.out.println(jedis.get("hello"));
+    }
+
+
 }

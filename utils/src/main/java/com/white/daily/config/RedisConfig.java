@@ -1,6 +1,8 @@
 package com.white.daily.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -8,14 +10,16 @@ import org.springframework.stereotype.Component;
  * @author tcs
  * @date Created in 2021-10-22
  */
-//@Component
+@Configuration
 public class RedisConfig {
 
+    // 编写自己的redisTemplate
     @Bean
-    public RedisTemplate xxlJobExecutor(RedisTemplate redisTemplate) {
-        redisTemplate.opsForValue().set("spring-r-cluster-1", 123);
-        redisTemplate.opsForValue().set("spring-r-cluster-2", 456);
-        redisTemplate.opsForValue().set("spring-r-cluster-3", 789);
-        return redisTemplate;
+    public RedisTemplate<String,Object> xxlJobExecutor(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
+        template.setConnectionFactory(redisConnectionFactory);
+        // 序列化配置
+//        template.setKeySerializer();
+        return template;
     }
 }

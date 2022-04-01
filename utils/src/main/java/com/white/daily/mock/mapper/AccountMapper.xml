@@ -11,7 +11,7 @@
 
 
     <select id="selectAccountPage" resultMap="accountResultMap">
-        select * from account
+        select * from account where id = 1
     </select>
 
 </mapper>
