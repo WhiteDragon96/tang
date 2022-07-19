@@ -15,10 +15,10 @@ public class BeanFactory {
     private final DefaultListableBeanFactory defaultListableBeanFactory;
 
     public  void testSetBean() {
-        User user = new User();
+       /* User user = new User();
         defaultListableBeanFactory.registerSingleton("user", user);
         beanFactory.autowireBean(user);
-        System.out.println(defaultListableBeanFactory.getBean("user").equals(user));
+        System.out.println(defaultListableBeanFactory.getBean("user").equals(user));*/
     }
 
     public static void main(String[] args) {

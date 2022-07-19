@@ -9,6 +9,7 @@
         <module>tang-wechat-robot</module>
         <module>tang-test</module>
         <module>tang-mybatis</module>
+        <module>tang-sharding-sphere</module>
     </modules>
 
     <parent>
