@@ -2,7 +2,7 @@ server:
   port: 6699
 spring:
   redis:
-    host: 172.18.64.27
+    host: 127.0.0.1
     port: 6379
     database: 14
     connect-timeout: 10000
