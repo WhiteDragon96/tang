@@ -5,7 +5,6 @@ import com.alibaba.otter.canal.client.CanalConnectors;
 import com.alibaba.otter.canal.protocol.CanalEntry;
 import com.alibaba.otter.canal.protocol.CanalEntry.*;
 import com.alibaba.otter.canal.protocol.Message;
-import javafx.fxml.Initializable;
 import org.springframework.beans.factory.InitializingBean;
 
 import java.net.InetSocketAddress;

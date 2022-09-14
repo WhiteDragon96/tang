@@ -6,6 +6,14 @@ spring:
     port: 6379
     database: 14
     connect-timeout: 10000
+  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 119.91.204.244
+    port: 5672
+    username: admin
+    password: tangcs123
+    #虚拟host 可以不设置,使用server默认host
+#    virtual-host: JCcccHost
   kafka:
     bootstrap-servers: 119.91.204.244:9092
     producer: # producer 生产者
