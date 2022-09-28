@@ -10,8 +10,8 @@ spring:
   rabbitmq:
     host: 119.91.204.244
     port: 5672
-    username: admin
-    password: tangcs123
+    username: guest
+    password: guest
     #虚拟host 可以不设置,使用server默认host
 #    virtual-host: JCcccHost
   kafka:
@@ -51,3 +51,7 @@ mybatis-plus:
   mapper-locations: classpath:com/neusense/**/mapper/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.neusense.**.entity
+
+yunshangxue:
+  elasticsearch:
+    hostlist: ${eshostlist:127.0.0.1:9200}
