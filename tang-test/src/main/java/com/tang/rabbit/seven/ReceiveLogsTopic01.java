@@ -9,11 +9,11 @@ public class ReceiveLogsTopic01 {
 
     public static void main(String[] argv) throws Exception {
         Channel channel = ConfirmMessage.getChannel();
-        channel.exchangeDeclare(EXCHANGE_NAME, "topic");
+//        channel.exchangeDeclare(EXCHANGE_NAME, "topic");
         //声明 Q1 队列与绑定关系
         String queueName = "Q1";
-        channel.queueDeclare(queueName, false, false, false, null);
-        channel.queueBind(queueName, EXCHANGE_NAME, "*.orange.*");
+//        channel.queueDeclare(queueName, false, false, false, null);
+        channel.queueBind(queueName, EXCHANGE_NAME, "*.q1.*");
         System.out.println("等待接收消息.....");
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");

@@ -8,12 +8,18 @@ spring:
     connect-timeout: 10000
   #配置rabbitMq 服务器
   rabbitmq:
-    host: 119.91.204.244
-    port: 5672
-    username: guest
-    password: guest
+    username: neusense
+    password: neusense
     #虚拟host 可以不设置,使用server默认host
-#    virtual-host: JCcccHost
+    addresses: 119.91.204.244:5672,119.91.204.244:5673
+    listener:
+      simple:
+        acknowledge-mode: manual
+        retry:
+          enabled: true #开启重试
+          max-attempts: 3 #最大重试次数，默认3次，达到次数后，会进行消息移除。若绑定了死信队列，则会放入死信队列中
+          initial-interval: 2000ms  #重试间隔时间
+
   kafka:
     bootstrap-servers: 119.91.204.244:9092
     producer: # producer 生产者
