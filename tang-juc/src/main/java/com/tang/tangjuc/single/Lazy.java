@@ -2,6 +2,7 @@ package com.tang.tangjuc.single;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.concurrent.TimeUnit;
 
 /**
  *  懒汉式单列
@@ -39,16 +40,18 @@ public class Lazy {
                 }
             }
         }
+        //test
         return LAZY;
     }
 
     // 多线程并发
-    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, InterruptedException {
         for (int i = 0; i < 10; i++) {
             new Thread(() ->{
                 Lazy.getInstance();
             }).start();
         }
+        TimeUnit.SECONDS.sleep(6);
         // 反射 破坏单例
         Lazy instance = Lazy.getInstance();
         Constructor<Lazy> declaredConstructor = Lazy.class.getDeclaredConstructor(null);
