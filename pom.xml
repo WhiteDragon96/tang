@@ -4,26 +4,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <modules>
-        <module>utils</module>
+        <module>tang-core</module>
         <module>tang-juc</module>
         <module>tang-wechat-robot</module>
         <module>tang-test</module>
         <module>tang-mybatis</module>
         <module>tang-sharding-sphere</module>
+        <module>tang-script</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.0</version>
+        <version>2.7.18</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.example</groupId>
+    <groupId>com.tang</groupId>
     <artifactId>tang</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>tang</name>
-    <description>tang</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -31,19 +31,6 @@
         <lombok.version>1.16.14</lombok.version>
         <druid.version>1.1.9</druid.version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <!--    在我们项目顶层的POM文件中，我们会看到dependencyManagement元素。通过它元素来管理jar包的版本，让子项目中引用一个依赖而
            不用显示的列出版本号。Maven会沿着父子层次向上走，直到找到一个拥有dependencyManagement元素的项目，然后它就会使用在这个
@@ -53,7 +40,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
-                <version>2.6.0</version>
+                <version>2.6.6</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>2.6.6</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -67,9 +59,15 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.3.12.RELEASE</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
